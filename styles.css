@@ -1,0 +1,432 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @font-face {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300 900;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+
+      .test {
+        font-size: 3rem;
+        color: white;
+      }
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        font-size: 10px;
+        font-family: 'Rubik';
+    }
+
+    :root {
+        --blue: hsl(246, 80%, 60%);
+        --light-red1: hsl(15, 100%, 70%);
+        --soft-blue: hsl(195, 74%, 62%);
+        --light-red2: hsl(348, 100%, 68%);
+        --lime-green: hsl(145, 58%, 55%);
+        --violet: hsl(264, 64%, 52%);
+        --soft-orange: hsl(43, 84%, 65%);
+        --very-dark-blue: hsl(226, 43%, 10%);
+        --dark-blue: hsl(235, 46%, 20%);
+        --desat-blue: hsl(235, 45%, 61%);
+        --pale-blue: hsl(236, 100%, 87%);
+    }
+
+    .timeTrk__bg {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--very-dark-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .timeTrk__cont {
+        width: 115rem;
+        height: 50rem;
+        border-radius: 1.2rem;
+        column-gap: 3rem;
+        row-gap: 3rem;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    }
+
+    .timeTrk__name-box {
+        grid-area: 1 / 1 / 3 / 2;
+        border-radius: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--dark-blue);
+    }
+
+    .timeTrk__name-inner {
+        width: 100%;
+        height: 68%;
+        box-sizing: border-box;
+        padding-left: 3rem;
+        border-radius: 1.2rem;
+        background-color: var(--blue);
+    }
+
+    .timeTrk__name-bottom {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3rem;
+        padding-top: 1rem;
+    }
+
+    .timeTrk__selection {
+        color: var(--desat-blue);
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: color 200ms linear;
+    }
+
+    .timeTrk__selection:hover {
+        color: #fff;
+        transition: color 200ms linear;
+    }
+
+    .timeTrk__box {
+        border-radius: 1.2rem;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .timeTrk__box-inner {
+        width: 100%;
+        height: 76%;
+        border-radius: 1.2rem;
+        padding-bottom: 1rem;
+        padding-inline: 3rem;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--dark-blue);
+        cursor: pointer;
+        transition: background-color 200ms linear;
+    }
+
+    .timeTrk__box-inner:hover {
+        background-color: #34397B;
+        transition: background-color 200ms linear;
+    }
+
+    .timeTrk__box-icon {
+        top: -1rem;
+        right: 1.5rem;
+        position: absolute;
+    }
+
+    .timeTrk__box-icon--exercise {
+        top: -.2rem;
+    }
+
+    .timeTrk__box-icon--play {
+        top: -.4rem;
+        right: 2rem;
+    }
+
+    .timeTrk__box-icon--social {
+        top: -1.4rem;
+        right: 1rem;
+    }
+
+    .timeTrk__profile-img {
+        width: 7rem;
+        margin-top: 3.4rem;
+        border-radius: 50%;
+        border: solid #fff 3px;
+    }
+
+    .timeTrk__p-report {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
+        margin-bottom: 0;
+        color: var(--pale-blue);
+    }
+
+    .timeTrk__profile-name {
+        font-size: 4rem;
+        margin-top: .5rem;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .timeTrk__category-wrap {
+        width: 100%;
+        display: flex;
+        margin-top: 1.5rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .timeTrk__category {
+        font-size: 1.8rem;
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+    .timeTrk__hrs {
+        font-size: 5rem;
+        margin-top: 1rem;
+        color: #fff;
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    .timeTrk__last {
+        color: var(--pale-blue);
+        font-size: 1.5rem;
+        margin-top: .8rem;
+    }
+
+    .timeTrk__work {
+        background: linear-gradient(to bottom, var(--light-red1) 25%, var(--light-red1) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__play {
+        background: linear-gradient(to bottom, var(--soft-blue) 25%, var(--soft-blue) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__study {
+        background: linear-gradient(to bottom, var(--light-red2) 25%, var(--light-red2) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__exercise {
+        background: linear-gradient(to bottom, var(--lime-green) 25%, var(--lime-green) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__social {
+        background: linear-gradient(to bottom, var(--violet) 25%, var(--violet) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__self {
+        background: linear-gradient(to bottom, var(--soft-orange) 25%, var(--soft-orange) 25%, var(--dark-blue) 25%, var(--dark-blue) 75%);
+    }
+
+    .timeTrk__selected {
+        color: #fff;
+    }
+
+    @media screen and (max-width: 1158px) {
+        .timeTrk__cont {
+            width: 100rem;
+            height: 82rem;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        }
+
+        .timeTrk__bg {
+            height: auto;
+            padding-block: 5rem;
+        }
+
+        .timeTrk__name-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .timeTrk__report-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeTrk__profile-name {
+            font-size: 3rem;
+            margin: 0;
+            margin-bottom: 2rem;
+        }
+
+        .timeTrk__p-report {
+            margin: 0;
+        }
+
+        .timeTrk__profile-img {
+            width: 6rem;
+            margin: 0;
+        }
+
+        .timeTrk__name-bottom {
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+
+        .timeTrk__name-box {
+            grid-area: 1 / 1 / 2 / 4;
+            margin-inline: 30rem;
+        }
+    }
+
+    @media screen and (max-width: 998px) {
+        .timeTrk__cont {
+            height: auto;
+            width: 96%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 25rem 1fr 1fr 1fr;
+        }
+        
+        .timeTrk__box {
+            height: 22rem;
+        }   
+
+        .timeTrk__name-box {
+            height: 25rem;
+            margin-inline: 22rem;
+            grid-area: 1 / 1 / 2 / 4;
+        }
+
+        .timeTrk__work {
+            grid-area: 2 / 1 / 3 / 2;
+            background-color: blue;
+        }
+
+        .timeTrk__play {
+            grid-area: 2 / 2 / 3 / 4;
+        }
+
+        .timeTrk__hrs {
+            font-size: 4rem;
+            margin-top: 0;
+        }
+
+        .timeTrk__category {
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+
+        .timeTrk__study {
+            grid-area: 3 / 1 / 4 / 2;
+            border-color: green;
+        }
+
+        .timeTrk__exercise {
+            grid-area: 3 / 2 / 4 / 4;
+        }
+
+        .timeTrk__social {
+          border-color: white;
+          grid-area: 4 / 1 / 5 / 2;
+        }
+
+        .timeTrk__self {
+            grid-area: 4 / 2 / 5 / 4;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .timeTrk__cont {
+           display: flex;
+           width: 82%;       
+           flex-direction: column;
+        }
+
+        .timeTrk__category-wrap {
+            margin-bottom: 1rem;
+        }
+
+        .timeTrk__name-box {
+            margin-inline: 0;
+        }
+
+        .timeTrk__hrs-wrap {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+
+    @media screen and (max-width: 500px) {
+
+        .timeTrk__cont {
+            width: 86%;
+        }
+
+        .timeTrk__profile-name {
+            font-size: 2.4rem;
+        }
+
+        .timeTrk__name-box {
+            height: 20rem;
+        }
+
+        .timeTrk__box {
+            height: 16rem;
+        }
+
+        .timeTrk__name-bottom {
+            margin-top: .5rem;
+        }
+
+        .timeTrk__category {
+            margin-bottom: .6rem;
+        }
+
+        .timeTrk__category-wrap {
+            margin-bottom: 0;
+        }
+
+        .timeTrk__hrs {
+            font-size: 3rem;
+        }
+
+        .timeTrk__p-report {
+            margin-bottom: .6rem;
+        }
+
+        .timeTrk__box-inner {
+            height: 70%;
+        }
+
+        .timeTrk__name-inner {
+            padding: 0;
+        }
+
+        .timeTrk__work {
+            background: linear-gradient(to bottom, var(--light-red1) 30%, var(--light-red1) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+    
+        .timeTrk__play {
+            background: linear-gradient(to bottom, var(--soft-blue) 30%, var(--soft-blue) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+    
+        .timeTrk__study {
+            background: linear-gradient(to bottom, var(--light-red2) 30%, var(--light-red2) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+    
+        .timeTrk__exercise {
+            background: linear-gradient(to bottom, var(--lime-green) 30%, var(--lime-green) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+    
+        .timeTrk__social {
+            background: linear-gradient(to bottom, var(--violet) 30%, var(--violet) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+    
+        .timeTrk__self {
+            background: linear-gradient(to bottom, var(--soft-orange) 30%, var(--soft-orange) 30%, var(--dark-blue) 30%, var(--dark-blue) 70%);
+        }
+
+    }
+
+    @media screen and (max-width: 335px) {
+        .timeTrk__cont {
+            width: 96%;
+        }
+    }

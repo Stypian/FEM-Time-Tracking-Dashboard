@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
+  <script src="data.js" defer></script>
+  <script src="scripts.js" defer></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main class="timeTrk__bg" role="main" aria-label="Main content area for time tracking dashboard">
+    <div class="timeTrk__cont" role="region" aria-label="Time tracking dashboard container">
+      <div class="timeTrk__name-box">
+        <div class="timeTrk__name-inner">
+          <img class="timeTrk__profile-img" src="images/image-jeremy.png" alt="profile image of Jeremy Robson"/>
+          <div class="timeTrk__report-wrap">
+            <p class="timeTrk__p-report">Report for</p>
+            <p class="timeTrk__profile-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="timeTrk__name-bottom">
+          <p class="timeTrk__selection" tabindex="1" aria-label="Daily report">Daily</p>
+          <p class="timeTrk__selection timeTrk__selected" tabindex="2" aria-label="Weekly report">Weekly</p>
+          <p class="timeTrk__selection" tabindex="3" aria-label="Monthly report">Monthly</p>
+        </div>
+      </div>
+        <div class="timeTrk__box timeTrk__work">
+          <img class="timeTrk__box-icon" src="images/icon-work.svg" alt="work"/>
+          <div class="timeTrk__box-inner" tabindex="4">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Work</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">32</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">36</span>hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeTrk__box timeTrk__play">
+          <img class="timeTrk__box-icon timeTrk__box-icon--play" src="images/icon-play.svg" alt="play"/>
+          <div class="timeTrk__box-inner" tabindex="5">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Play</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">10</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">8</span>hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeTrk__box timeTrk__study">
+          <img class="timeTrk__box-icon" src="images/icon-study.svg" alt="study"/>
+          <div class="timeTrk__box-inner" tabindex="6">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Study</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">4</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">7</span>hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeTrk__box timeTrk__exercise">
+          <img class="timeTrk__box-icon timeTrk__box-icon--exercise" src="images/icon-exercise.svg" alt="exercise"/>
+          <div class="timeTrk__box-inner" tabindex="7">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Exercise</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">4</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">5</span>hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeTrk__box timeTrk__social">
+          <img class="timeTrk__box-icon timeTrk__box-icon--social" src="images/icon-social.svg" alt="social"/>
+          <div class="timeTrk__box-inner" tabindex="8">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Social</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">5</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">10</span>hrs</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeTrk__box timeTrk__self">
+          <img class="timeTrk__box-icon" src="images/icon-self-care.svg" alt="self care"/>
+          <div class="timeTrk__box-inner" tabindex="9">
+            <div class="timeTrk__category-wrap">
+              <p class="timeTrk__category">Self Care</p>
+              <img class="timeTrk__ellipsis" src="images/icon-ellipsis.svg" alt="more options"/>
+            </div>
+            <div class="timeTrk__hrs-wrap">
+              <p class="timeTrk__hrs"><span class="timeTrk__hrs timeTrk__hrs--num">2</span>hrs</p>
+              <p class="timeTrk__last">Last Week - <span class="timeTrk__last timeTrk__last--num">2</span>hrs</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <h1 class="test"></h1>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">RonL</a>.
+  </div>
+</body>
+</html>
