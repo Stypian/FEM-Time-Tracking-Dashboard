@@ -84,7 +84,11 @@
     .timeTrk__selection {
         color: var(--desat-blue);
         font-size: 1.8rem;
-        margin-bottom: 0;
+        background-color: transparent;
+        border: none;
+        margin-top: 1.8rem;
+        padding: 0;
+        text-align: left;
         cursor: pointer;
         transition: color 200ms linear;
     }
